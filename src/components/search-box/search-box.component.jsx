@@ -1,17 +1,26 @@
-import { Component } from "react";
+// import { Component } from "react";
 import './search-box.styles.css';
+// Keeping class Component example on this one
 
-class SearchBox extends Component {
-    render() {
-        return (
-            <input 
-                className= {`search-box ${this.props.className}`} 
-                type='search' 
-                placeholder={this.props.placeholder} 
-                onChange={this.props.onChangeHandler}
-            />
-        )
-    }
-}
+const SearchBox = ({ className, placeholder, onChangeHandler}) => {
+    //Could also be implicitly returned without brackets or return statement
+    <input 
+        className= {`search-box ${className}`} 
+        type='search' 
+        placeholder={placeholder} 
+        onChange={onChangeHandler}
+    />
+} 
+       
+    
+    
+
+// class SearchBox extends Component {
+//     render() {
+//         return (
+//             
+//         )
+//     }
+// }
 
 export default SearchBox;
